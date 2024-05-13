@@ -4,6 +4,9 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 // Collect employee data
 const collectEmployees = function() {
   // TODO: Get user input to create and return an array of employee objects
+    let employee = prompt("Enter an employee's name");
+    console.log(employee);
+
 }
 
 // Display the average salary
@@ -81,3 +84,4 @@ const trackEmployeeData = function() {
 
 // Add event listener to 'Add Employees' button
 addEmployeesBtn.addEventListener('click', trackEmployeeData);
+collectEmployees()
