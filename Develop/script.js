@@ -19,7 +19,7 @@ const collectEmployees = function() {
     }
 
     // Ask prof/TA : why does this function return undefined when logging the properties of the object
-   
+  //  Todo: Finish This function 
   
 }
 
@@ -37,6 +37,7 @@ const displayAverageSalary = function(employeesArray) {
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
+  
 
 }
 
@@ -106,3 +107,4 @@ const trackEmployeeData = function() {
 // Add event listener to 'Add Employees' button
 addEmployeesBtn.addEventListener('click', trackEmployeeData);
 collectEmployees()
+displayAverageSalary()
