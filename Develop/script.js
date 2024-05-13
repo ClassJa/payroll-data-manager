@@ -4,17 +4,23 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 // Collect employee data
 const collectEmployees = function() {
   // TODO: Get user input to create and return an array of employee objects
-  const employee = {
+  let employee = {
     firstName: prompt("Enter an employee's first name"),
     lastName: prompt("Enter an employee's last name"),
     salary: prompt("Enter an employee's salary")
   }
-    let employeesArray = []
-    console.log(employee);
+    const employeesArray = []
     employeesArray.push(employee)
-    console.log(`This is the array: ${employeesArray}`) // Debugging purposes
-    
+    console.log(employeesArray)
 
+    for (employee in employeesArray) {
+      console.log(employeesArray.length)
+      console.log(`This is the array: ${employee.firstName}`) // Debugging purposes
+    }
+
+    // Ask prof/TA : why does this function return undefined when logging the properties of the object
+   
+  
 }
 
 // Display the average salary
