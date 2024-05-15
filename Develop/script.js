@@ -46,12 +46,17 @@ const displayAverageSalary = function(employeesArray) {
 const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
   for (let i = 0; i < employeesArray.length; i++) {
+    // randomNum will only be between 0 and 1
     randomNum = Math.random()
-    randomEmployee = employeesArray[randomNum]
+    randomEmployeeIndex = employeesArray[randomNum] * employeesArray.length
+    randomEmployeeIndex = randomEmployeeIndex.floor
     console.log(randomNum)
+    employeeFullName = `${employeesArray[randomEmployeeIndex].firstName, employeesArray[randomEmployeeIndex].lastNameName} `
   }
-  console.log(randomEmployee)
-  return randomEmployee
+  console.log(employeeFullName)
+  return employeeFullName
+  // Debug why it is printing out NaN when console.logging the randomEmployee
+  // Expected to print o
 }
 
 /*
