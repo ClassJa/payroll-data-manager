@@ -3,46 +3,39 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
 // Collect employee data
 const collectEmployees = function() {
-  // TODO: Get user input to create and return an array of employee objects
-  // while () {
-
-  // }
-// To do
-
-  let employee = {
-    firstName: prompt("Enter an employee's first name"),
-    lastName: prompt("Enter an employee's last name"),
-    salary: prompt("Enter an employee's salary"),
-
-     
-      
-      // button: prompt("Continue or Cancel?")
-    }
-
-    while (salary.isNan()) {
-      return $0
-    }
-      salary = prompt("Enter an employee's salary")
-    }
-    // const employeesArray = []
-    // employeesArray.push(employee)
-    // console.log(employeesArray)
+  
+    let moreEmployees = true
     const employeesArray = []
-    while (employee) {
-      employeesArray.push(employee)
-      console.log(employeesArray)
-    }
+    while (moreEmployees) {
+      // create employee here
+      const firstName = prompt("Enter an employee's first name")
+      const lastName = prompt("Enter an employee's last name")
+      const salary = prompt("Enter an employee's salary", 0)
+      // Defaults the employee's salary to 0
+      const employee = {
+        firstName: firstName,
+        lastName: lastName,
+        salary: salary
 
+      }
+      employeesArray.push(employee)
+      moreEmployees = confirm("Do you want to add more employees?")
+      // console.log(employeesArray)
+    }
+    // console.log(employeesArray)
+    return employeesArray
+  }
+// retirn employeesArray
     // for (employee of employeesArray) { 
 
-    for (i=0; i<employeesArray.length; i++) {
-      console.log(employee)
-    }
-      console.log(employeesArray.length)
-      console.log(employee)
-      console.log(`This is the array: ${employee.firstName}`) // Debugging purposes
-      return employeesArray;
-    
+  //   for (i=0; i<employeesArray.length; i++) {
+  //     console.log(employee)
+  //   }
+  //     console.log(employeesArray.length)
+  //     console.log(employee)
+  //     console.log(`This is the array: ${employee.firstName}`) // Debugging purposes
+  //     return employeesArray;
+  // }
 
   //  Todo: Finish This function 
   
@@ -131,5 +124,5 @@ const trackEmployeeData = function() {
 
 // Add event listener to 'Add Employees' button
 addEmployeesBtn.addEventListener('click', trackEmployeeData);
-collectEmployees()
-displayAverageSalary()
+// collectEmployees()
+// displayAverageSalary()
