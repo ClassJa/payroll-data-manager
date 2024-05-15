@@ -24,20 +24,27 @@ const collectEmployees = function() {
     // To do : figute out how to sort by last name 
   }
 
+
+  // Not sure where to place this but needed to ensure salary inputted is a number
+// salary = Number(salary);
+// if (Number.isNan(salary)) {
+//   alert("Salary must be a number")
+// } salary === 0
+
+
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
   // TODO: Calculate and display the average salary
-  let salaryTotal = 0
-  let count = 0
-  let avg = 0
+  let salaryTotal;
+  let avg;
   for (let i = 0; i < employeesArray.length; i++) {
-    count += 1 
-    // count variable keeps track of the total number of employees are used (so it can take the average)
+    // count variable keeps track of the total number of employees and is used to take the average)
     console.log(employeesArray)
     salaryTotal += employeesArray[i].salary
+    console.log(salaryTotal)
+    avg += parseInt(salaryTotal/i+1)
+    console.log(avg)
   }
-  avg = parseInt(salaryTotal/count)
-  console.log(avg)
   return avg
   // Debug why it is returning the avg of 80 + 80  to be 4040 instead of 80. Has something to do with the type 
 }
@@ -47,16 +54,16 @@ const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
   for (let i = 0; i < employeesArray.length; i++) {
     // randomNum will only be between 0 and 1
-    randomNum = Math.random()
-    randomEmployeeIndex = employeesArray[randomNum] * employeesArray.length
-    randomEmployeeIndex = randomEmployeeIndex.floor
-    console.log(randomNum)
-    employeeFullName = `${employeesArray[randomEmployeeIndex].firstName, employeesArray[randomEmployeeIndex].lastNameName} `
+    let randomNum = Math.random()
+    let randomEmployeeIndex = Math.floor(employeesArray.length * randomNum)
+    console.log(randomEmployeeIndex)
+    let randomEmployee = employeesArray[randomEmployeeIndex]
+    let employeeFullName = `${randomEmployee.firstName} ${randomEmployee.lastName}`
+    console.log(employeeFullName)
   }
-  console.log(employeeFullName)
   return employeeFullName
+  // Why is employeeFullName not being returned? Error says it is undefined (shouldn't it still be in scope?)
   // Debug why it is printing out NaN when console.logging the randomEmployee
-  // Expected to print o
 }
 
 /*
