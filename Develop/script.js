@@ -4,24 +4,49 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 // Collect employee data
 const collectEmployees = function() {
   // TODO: Get user input to create and return an array of employee objects
+  // while () {
+
+  // }
+// To do
+
   let employee = {
     firstName: prompt("Enter an employee's first name"),
     lastName: prompt("Enter an employee's last name"),
-    salary: prompt("Enter an employee's salary")
-  }
-    const employeesArray = []
-    employeesArray.push(employee)
-    console.log(employeesArray)
+    salary: prompt("Enter an employee's salary"),
 
-    for (employee in employeesArray) {
-      console.log(employeesArray.length)
-      console.log(`This is the array: ${employee.firstName}`) // Debugging purposes
+     
+      
+      // button: prompt("Continue or Cancel?")
     }
 
-    // Ask prof/TA : why does this function return undefined when logging the properties of the object
+    while (salary.isNan()) {
+      return $0
+    }
+      salary = prompt("Enter an employee's salary")
+    }
+    // const employeesArray = []
+    // employeesArray.push(employee)
+    // console.log(employeesArray)
+    const employeesArray = []
+    while (employee) {
+      employeesArray.push(employee)
+      console.log(employeesArray)
+    }
+
+    // for (employee of employeesArray) { 
+
+    for (i=0; i<employeesArray.length; i++) {
+      console.log(employee)
+    }
+      console.log(employeesArray.length)
+      console.log(employee)
+      console.log(`This is the array: ${employee.firstName}`) // Debugging purposes
+      return employeesArray;
+    
+
   //  Todo: Finish This function 
   
-}
+
 
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
