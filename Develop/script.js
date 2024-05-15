@@ -21,22 +21,25 @@ const collectEmployees = function() {
       moreEmployees = confirm("Do you want to add more employees?")
     }
     return employeesArray.sort()
+    // To do : figute out how to sort by last name 
   }
 
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
   // TODO: Calculate and display the average salary
-  let total = 0
+  let salaryTotal = 0
   let count = 0
   let avg = 0
-  for (employee in employeesArray) {
+  for (let i = 0; i < employeesArray.length; i++) {
     count += 1 
     // count variable keeps track of the total number of employees are used (so it can take the average)
-    total += employee.salary
-    avg = total / count
+    console.log(employeesArray)
+    salaryTotal += employeesArray[i].salary
   }
-  return avg
+  avg = parseInt(salaryTotal/count)
   console.log(avg)
+  return avg
+  // Debug why it is returning the avg of 80 + 80  to be 4040 instead of 80. Has something to do with the type 
 }
 
 // Select a random employee
