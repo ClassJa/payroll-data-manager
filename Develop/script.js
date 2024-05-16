@@ -11,8 +11,8 @@ const collectEmployees = function() {
       const lastName = prompt("Enter an employee's last name")
       let salary;
 
-      let enteredSalary = prompt("Enter an employee's salary", Number(0))
-      if (isNaN(salary)) {
+      let enteredSalary = Number(prompt("Enter an employee's salary", Number(0)))
+      if (isNaN(enteredSalary) && enteredSalary !== 0) {
         alert("Salary must be a number")
         salary = Number(prompt("Enter an employee's salary", Number(0)))
       } else {
@@ -27,7 +27,6 @@ const collectEmployees = function() {
       moreEmployees = confirm("Do you want to add more employees?")
     }
     return employeesArray.sort()
-    // To do : figute out how to sort by last name 
   }
 
 
