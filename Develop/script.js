@@ -6,7 +6,6 @@ const collectEmployees = function() {
     let moreEmployees = true
     let employeesArray = []
     while (moreEmployees) {
-      // create employee here
       const firstName = prompt("Enter an employee's first name")
       const lastName = prompt("Enter an employee's last name")
       let salary;
@@ -17,6 +16,7 @@ const collectEmployees = function() {
         enteredSalary = Number(prompt("Enter an employee's salary", 0))
       }
       salary = enteredSalary
+      // uses all of the valid prompted inputs from the user to create an employee object
         const employee = {
           firstName: firstName,
           lastName: lastName,
@@ -30,16 +30,17 @@ const collectEmployees = function() {
 
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
-  // TODO: Calculate and display the average salary
+  // Creating variables that will be used in the function
   let salaryTotal = Number(0)
   let totalEmployees = employeesArray.length
   let avg;
   for (let i = 0; i < totalEmployees; i++) {
-    // count variable keeps track of the total number of employees and is used to take the average)
+    // loop through each employee and accessing that employee's salary property
     salaryTotal += employeesArray[i].salary
   }
   avg = salaryTotal/totalEmployees
   console.log(`The average salary is ${avg}`)
+  // Accounting for grammar depending on the number of employees present
   if (totalEmployees <= 1) {
     console.log(`The number of employees is ${totalEmployees}`)
   } else {
@@ -50,20 +51,16 @@ const displayAverageSalary = function(employeesArray) {
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
-  // TODO: Select and display a random employee
   for (let i = 0; i < employeesArray.length; i++) {
     // randomNum will only be between 0 and 1
     let randomNum = Math.random()
+    // multiplying the randomNum by the length of the employee array to ensure a number that will range between the employees in the array
     let randomEmployeeIndex = Math.floor(employeesArray.length * randomNum)
-    console.log(randomEmployeeIndex)
     let randomEmployee = employeesArray[randomEmployeeIndex]
     let employeeFullName = `${randomEmployee.firstName} ${randomEmployee.lastName}`
     console.log(employeeFullName)
     return employeeFullName
   }
-  // return employeeFullName
-  // Why is employeeFullName not being returned? Error says it is undefined (shouldn't it still be in scope?)
-  // Debug why it is printing out NaN when console.logging the randomEmployee
 }
 
 /*
