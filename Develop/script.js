@@ -25,7 +25,7 @@ const collectEmployees = function() {
       employeesArray.push(employee)
       moreEmployees = confirm("Do you want to add more employees?")
     }
-    return employeesArray.sort()
+    return employeesArray
   }
 
 // Display the average salary
@@ -40,7 +40,11 @@ const displayAverageSalary = function(employeesArray) {
   }
   avg = salaryTotal/totalEmployees
   console.log(`The average salary is ${avg}`)
-  console.log(`The number of employees are ${totalEmployees}`)
+  if (totalEmployees <= 1) {
+    console.log(`The number of employees is ${totalEmployees}`)
+  } else {
+    console.log(`The number of employees are ${totalEmployees}`)
+  }
   return avg
 }
 
