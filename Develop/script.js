@@ -3,20 +3,26 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
 // Collect employee data
 const collectEmployees = function() {
-  
     let moreEmployees = true
     let employeesArray = []
     while (moreEmployees) {
       // create employee here
       const firstName = prompt("Enter an employee's first name")
       const lastName = prompt("Enter an employee's last name")
-      const salary = prompt("Enter an employee's salary", 0)
-      // Defaults the employee's salary to 0
-      const employee = {
-        firstName: firstName,
-        lastName: lastName,
-        salary: salary
+      let salary;
+
+      let enteredSalary = prompt("Enter an employee's salary", Number(0))
+      if (isNaN(salary)) {
+        alert("Salary must be a number")
+        salary = Number(prompt("Enter an employee's salary", Number(0)))
+      } else {
+        salary = enteredSalary
       }
+        const employee = {
+          firstName: firstName,
+          lastName: lastName,
+          salary: salary
+        }
       employeesArray.push(employee)
       moreEmployees = confirm("Do you want to add more employees?")
     }
@@ -35,6 +41,10 @@ const collectEmployees = function() {
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
   // TODO: Calculate and display the average salary
+  // salary = Number(salary);
+  // if (Number.isNan(salary)) {
+  //   alert("Salary must be a number")
+  // }
   let salaryTotal;
   let avg;
   for (let i = 0; i < employeesArray.length; i++) {
@@ -60,8 +70,9 @@ const getRandomEmployee = function(employeesArray) {
     let randomEmployee = employeesArray[randomEmployeeIndex]
     let employeeFullName = `${randomEmployee.firstName} ${randomEmployee.lastName}`
     console.log(employeeFullName)
+    return employeeFullName
   }
-  return employeeFullName
+  // return employeeFullName
   // Why is employeeFullName not being returned? Error says it is undefined (shouldn't it still be in scope?)
   // Debug why it is printing out NaN when console.logging the randomEmployee
 }
