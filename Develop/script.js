@@ -11,10 +11,10 @@ const collectEmployees = function() {
       const lastName = prompt("Enter an employee's last name")
       let salary;
 
-      let enteredSalary = Number(prompt("Enter an employee's salary", Number(0)))
+      let enteredSalary = Number(prompt("Enter an employee's salary", 0))
       if (isNaN(enteredSalary) && enteredSalary !== 0) {
         alert("Salary must be a number")
-        salary = Number(prompt("Enter an employee's salary", Number(0)))
+        salary = Number(prompt("Enter an employee's salary", 0))
       } else {
         salary = enteredSalary
       }
@@ -28,14 +28,6 @@ const collectEmployees = function() {
     }
     return employeesArray.sort()
   }
-
-
-  // Not sure where to place this but needed to ensure salary inputted is a number
-// salary = Number(salary);
-// if (Number.isNan(salary)) {
-//   alert("Salary must be a number")
-// } salary === 0
-
 
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
