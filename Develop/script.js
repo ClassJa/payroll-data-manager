@@ -12,12 +12,11 @@ const collectEmployees = function() {
       let salary;
 
       let enteredSalary = Number(prompt("Enter an employee's salary", 0))
-      if (isNaN(enteredSalary) && enteredSalary !== 0) {
+      while (isNaN(enteredSalary) && enteredSalary !== 0) {
         alert("Salary must be a number")
-        salary = Number(prompt("Enter an employee's salary", 0))
-      } else {
-        salary = enteredSalary
+        enteredSalary = Number(prompt("Enter an employee's salary", 0))
       }
+      salary = enteredSalary
         const employee = {
           firstName: firstName,
           lastName: lastName,
