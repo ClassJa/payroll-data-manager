@@ -39,12 +39,11 @@ const displayAverageSalary = function(employeesArray) {
     salaryTotal += employeesArray[i].salary
   }
   avg = salaryTotal/totalEmployees
-  console.log(`The average salary is ${avg}`)
   // Accounting for grammar depending on the number of employees present
   if (totalEmployees <= 1) {
-    console.log(`The number of employees is ${totalEmployees}`)
+    console.log(`The average salary between the ${totalEmployees} employee is ${avg}`)
   } else {
-    console.log(`The number of employees are ${totalEmployees}`)
+    console.log(`The average salary between the ${totalEmployees} total employees are ${avg}`)
   }
   return avg
 }
