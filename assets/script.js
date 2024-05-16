@@ -57,7 +57,7 @@ const getRandomEmployee = function(employeesArray) {
     let randomEmployeeIndex = Math.floor(employeesArray.length * randomNum)
     let randomEmployee = employeesArray[randomEmployeeIndex]
     let employeeFullName = `${randomEmployee.firstName} ${randomEmployee.lastName}`
-    console.log(employeeFullName)
+    console.log(`${employeeFullName} is the random employee chosen!`)
     return employeeFullName
   }
 }
