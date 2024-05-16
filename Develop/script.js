@@ -31,22 +31,17 @@ const collectEmployees = function() {
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
   // TODO: Calculate and display the average salary
-  // salary = Number(salary);
-  // if (Number.isNan(salary)) {
-  //   alert("Salary must be a number")
-  // }
-  let salaryTotal;
+  let salaryTotal = Number(0)
+  let totalEmployees = employeesArray.length
   let avg;
-  for (let i = 0; i < employeesArray.length; i++) {
+  for (let i = 0; i < totalEmployees; i++) {
     // count variable keeps track of the total number of employees and is used to take the average)
-    console.log(employeesArray)
     salaryTotal += employeesArray[i].salary
-    console.log(salaryTotal)
-    avg += parseInt(salaryTotal/i+1)
-    console.log(avg)
   }
+  avg = salaryTotal/totalEmployees
+  console.log(`The average salary is ${avg}`)
+  console.log(`The number of employees are ${totalEmployees}`)
   return avg
-  // Debug why it is returning the avg of 80 + 80  to be 4040 instead of 80. Has something to do with the type 
 }
 
 // Select a random employee
