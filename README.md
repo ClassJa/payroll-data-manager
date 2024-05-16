@@ -5,7 +5,7 @@ This project utilizes the programming languages of Javascript to add logic to a 
 
 ## Usage
 
-![alt text](image.png)
+![alt text](image-1.png)
 
 https://classja.github.io/payroll-data-manager/
 
